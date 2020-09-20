@@ -1,15 +1,13 @@
 package by.gorbatenkova.belstu.staff;
 
-import androidx.annotation.NonNull;
+import by.gorbatenkova.belstu.exception.EduException;
+import by.gorbatenkova.belstu.units.Person;
 
 import java.util.ArrayList;
 
-import gorbatenkova.fit.bstu.by.exception.EduException;
-import gorbatenkova.fit.bstu.by.units.Person;
-
 public class Staff {
     private ArrayList<Person> persons;
-    private int maxPersonsCount;
+    private int maxAmountPersons;
 
     public Staff() {
      persons = new ArrayList<>();
@@ -25,12 +23,12 @@ public class Staff {
         this.persons = persons;
     }
 
-    public void setMaxPersonsCount(int count) {
-        this.maxPersonsCount = count;
+    public void setMaxAmountPersons(int count) {
+        this.maxAmountPersons = count;
     }
 
     public boolean add(Person person) throws EduException {
-        if(persons.size() == maxPersonsCount) {
+        if(persons.size() == maxAmountPersons) {
             throw new EduException("Staff is full");
         } else {
             persons.add(person);
@@ -47,7 +45,6 @@ public class Staff {
         }
     }
 
-    @NonNull
     @Override
     public String toString() {
         String resultString = "";

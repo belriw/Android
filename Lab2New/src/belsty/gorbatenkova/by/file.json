@@ -1,0 +1,12 @@
+[
+{
+type:"belsty.gorbatenkova.by.units.Student",
+name:"Lera",
+organization:"iTechArt",
+age:20
+},
+{
+type:"belsty.gorbatenkova.by.units.Listener",
+name:"Dima"
+}
+]
